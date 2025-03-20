@@ -109,8 +109,10 @@ public class Screen {
                     break;
                 case DISTANCE:
                     Collections.sort(sorteList, new shapeDistanceComparator());
+                    break;
                 case TIMESTAMP:
                     Collections.sort(sorteList, new shapeTimestampComparator());
+                    break;
                 default:
                     break;
             }
@@ -120,6 +122,22 @@ public class Screen {
         } catch (Exception e) {
             System.out.println(e.getMessage());
             return new ArrayList<>();
+        }
+    }
+
+    public boolean isPointInsideAll(Point p) {
+        try {
+
+            for (Shape shape : shapeList) {
+                if (!shape.isEnclosed(p)) {
+                    return false;
+                }
+            }
+
+            return true;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return false;
         }
     }
 
