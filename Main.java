@@ -12,16 +12,19 @@ import FactoryADT.Shape.ShapeFactory;
 public class Main {
 
     public int intScanner() {
-        Scanner sc = new Scanner(System.in);
         int n;
         while (true) {
+            Scanner sc = new Scanner(System.in);
             try {
                 n = sc.nextInt();
                 if (n >= 0) {
                     break;
+                } else {
+                    System.out.println("enter positive integer only");
                 }
             } catch (InputMismatchException ime) {
                 System.out.println("Enter integer value only");
+                continue;
             }
         }
         // sc.close();

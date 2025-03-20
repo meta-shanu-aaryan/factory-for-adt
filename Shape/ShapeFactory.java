@@ -5,6 +5,12 @@ import java.util.List;
 import FactoryADT.Shape.Shape.shapeType;
 
 public class ShapeFactory {
+    /**
+     * @param type      shapeType enum, which shape you want, e.g. CIRCLE, SQUARE
+     * @param origin    Point of origin
+     * @param parameter other parameters depending on Shape type
+     * @return Object as per type
+     */
     public static Shape createShape(shapeType type, Point origin, List<Integer> parameter) {
 
         switch (type) {

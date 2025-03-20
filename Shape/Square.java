@@ -8,6 +8,11 @@ public class Square implements Shape {
     Object type;
     long timestamp;
 
+    // Constructor
+    /**
+     * @param origin    Point of origin
+     * @param parameter Other parameter such as side
+     */
     public Square(Point origin, List<Integer> parameter) {
         this.type = Shape.shapeType.SQUARE;
         this.origin = origin;
@@ -15,6 +20,7 @@ public class Square implements Shape {
         this.timestamp = System.currentTimeMillis();
     }
 
+    // overridden methods
     @Override
     public double getArea() {
         try {

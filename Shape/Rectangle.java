@@ -10,6 +10,11 @@ public class Rectangle implements Shape {
     Object type;
     long timestamp;
 
+    // constructor
+    /**
+     * @param origin    Origin point
+     * @param parameter other parameters such as length and breadth as arrayList
+     */
     public Rectangle(Point origin, List<Integer> parameter) {
         this.type = Shape.shapeType.RECTANGLE;
         this.origin = origin;
@@ -18,6 +23,7 @@ public class Rectangle implements Shape {
         this.timestamp = System.currentTimeMillis();
     }
 
+    // Overridden methods
     @Override
     public double getArea() {
         try {

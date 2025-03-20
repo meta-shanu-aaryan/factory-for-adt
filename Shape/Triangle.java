@@ -10,6 +10,11 @@ public class Triangle implements Shape {
     Object type;
     long timestamp;
 
+    /**
+     * @param origin Point 1 of triangle
+     * @param p2     Point 2 of triangle
+     * @param p3     Point 3 of triangle
+     */
     public Triangle(Point origin, Point p2, Point p3) {
         this.type = Shape.shapeType.TRIANGLE;
         this.origin = origin;
@@ -18,6 +23,11 @@ public class Triangle implements Shape {
         this.timestamp = System.currentTimeMillis();
     }
 
+    /**
+     * @param origin    Point 1 of triangle and origin point
+     * @param parameter array with other coordinates such as its other coordinate
+     *                  points
+     */
     public Triangle(Point origin, List<Integer> parameter) {
         this.origin = origin;
         this.p2 = new Point(parameter.get(0), parameter.get(1));
@@ -78,8 +88,7 @@ public class Triangle implements Shape {
 
     @Override
     public long getTimeStamp() {
-        // TODO Auto-generated method stub
-        return 0;
+        return this.timestamp;
     }
 
 }

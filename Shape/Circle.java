@@ -9,6 +9,10 @@ public class Circle implements Shape {
     Object type;
     long timestamp;
 
+    /**
+     * @param origin origin point of the circle that is its center
+     * @param parameter
+     */
     public Circle(Point origin, List<Integer> parameter) {
         this.origin = origin;
         this.radius = parameter.get(0);

@@ -10,6 +10,11 @@ public class Polygon implements Shape {
     public Shape.shapeType type;
     long timestamp;
 
+    // constructor
+    /**
+     * @param origin    Point of origin and first point
+     * @param parameter List of other point's coordinates
+     */
     public Polygon(Point origin, List<Integer> parameter) {
         this.timestamp = System.currentTimeMillis();
         this.type = Shape.shapeType.POLYGON;

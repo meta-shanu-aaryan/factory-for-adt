@@ -8,6 +8,7 @@ import java.util.List;
 import FactoryADT.Shape.Point;
 import FactoryADT.Shape.Shape;
 
+//Classes overriding compare of Comparator for modified sorting
 class shapeAreaComparator implements Comparator<Shape> {
 
     @Override
@@ -58,12 +59,20 @@ public class Screen {
     int xMax;
     int yMax;
 
+    /**
+     * @param xMax Max X axis of screen
+     * @param yMax Max Y axis of screen
+     */
     public Screen(int xMax, int yMax) {
         this.xMax = xMax;
         this.yMax = yMax;
         shapeList = new ArrayList<>();
     }
 
+    /**
+     * @param shape Object to add in list
+     * @return true if object added to screen else false
+     */
     public boolean addShape(Shape shape) {
         try {
             return shapeList.add(shape);
@@ -74,6 +83,10 @@ public class Screen {
         }
     }
 
+    /**
+     * @param shape Object to delete in list
+     * @return true if object deleted from screen else false
+     */
     public boolean deleteShape(Shape shape) {
         try {
             return shapeList.remove(shape);
@@ -83,6 +96,10 @@ public class Screen {
         }
     }
 
+    /**
+     * @param shape ShapeType the shape to be deleted
+     * @return true if deleted successfully, else false
+     */
     public boolean deleteAllShape(Shape.shapeType shape) {
         try {
 
@@ -97,6 +114,10 @@ public class Screen {
         }
     }
 
+    /**
+     * @param c in which parameter sorting is to be performed
+     * @return sorted list according to parameter
+     */
     List<Shape> sortedList(compareBy c) {
         try {
             List<Shape> sorteList = new ArrayList<>(shapeList);
@@ -125,6 +146,10 @@ public class Screen {
         }
     }
 
+    /**
+     * @param p The point to check is enclosed by all shapes
+     * @return true if it is inside all shapes else false
+     */
     public boolean isPointInsideAll(Point p) {
         try {
 
