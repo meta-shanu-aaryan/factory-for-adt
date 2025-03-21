@@ -216,6 +216,7 @@ public class Main {
                         }
                         break;
                     case 5:
+                        System.out.println("Enter the axis please");
                         int axisX = m.intScanner();
                         int axisY = m.intScanner();
                         if (screen.isPointInsideAll(new Point(axisX, axisY))) {
